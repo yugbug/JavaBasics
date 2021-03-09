@@ -1,0 +1,61 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class HigherOrLower {
+
+    public static void main(String[] args) {
+        Random rand = new Random(); // random method
+
+        int randomNumber = rand.nextInt(100);
+
+        Scanner scan = new Scanner(System.in);
+
+        int guesses = 5;
+
+        while (true) {
+
+            System.out.println("Pick a number between 1-100");
+            int firstGuess = scan.nextInt();
+
+            if (firstGuess > randomNumber) {
+
+                System.out.println("You guessed too high, go lower!");
+
+                guesses -= 1;
+
+            }
+
+            if (firstGuess < randomNumber) {
+
+                System.out.println("You guessed too low, go higher!");
+
+                guesses -= 1;
+
+
+            }
+
+            if (firstGuess == randomNumber) {
+                System.out.println("You got it correct!");
+                java.lang.System.exit(0);
+
+
+
+
+            }
+
+            if(guesses == 0) {
+
+                System.out.println("You lost! You ran out of guesses.");
+
+                java.lang.System.exit(0);
+
+            }
+
+
+        }
+
+    }
+
+}
+
+
