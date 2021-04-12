@@ -1,0 +1,15 @@
+public class Fibonacci {
+
+    public static void main(String[] args) {
+        int a = 0, b = 1, COUNT = 25; // a is the smaller number in sequence (f-n) while b is the answer
+        System.out.println(0); // print 0 and 1 before as both are apart of the sequence but not shown in for loop
+        System.out.println(1);
+        for(int i=2; i<COUNT; i++) {
+            int c = a + b; // c is the integer to print out as it adds both numbers together
+            System.out.println(c);
+            a = b;
+            b = c;
+
+        }
+    }
+}
